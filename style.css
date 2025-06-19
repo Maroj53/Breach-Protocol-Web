@@ -8,7 +8,6 @@ body {
   .container {
     display: flex;
     height: 100vh;
-    overflow: hidden;
   }
   
   .sidebar {
@@ -62,16 +61,20 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
+
   .hero .overlay h1 {
     font-size: 3rem;
     color: white;
+    margin-top: 100px;
   }
   
   .description {
     padding: 30px;
     max-width: 800px;
+    margin-top: 20px;  /* Add this line to create vertical spacing */
   }
+
   
   .discord-widget {
     padding: 30px;
@@ -140,5 +143,47 @@ body {
 body, html {
   height: 100%;                  /* Make sure body fills viewport */
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .topbar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .topbar nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .topbar nav ul li {
+    margin: 0;
+  }
+
+  .hero .overlay h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .wiki-button, .secondary-wiki-button {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
